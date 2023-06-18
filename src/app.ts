@@ -23,6 +23,6 @@ client.on('ready', () => {
     console.log(`Logged in as ${client.user!!.tag}`)
 })
 
-const token = process.env.TOKEN
+const discord_token = process.env.DISCORD_TOKEN
 
-client.login(token)
+client.login(discord_token)

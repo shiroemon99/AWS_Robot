@@ -5,7 +5,8 @@
   "main": "app.js",
   "scripts": {
     "test": "node start",
-    "dev": "ts-node --esm ./src/app.ts"
+    "dev": "ts-node --esm ./src/app.ts",
+    "start": "ts-node --esm src/app.ts"
   },
   "author": "Shiroemon",
   "license": "ISC",
