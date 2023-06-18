@@ -1,6 +1,7 @@
 import Discord from 'discord.js';
-import {config} from 'dotenv';
+import { config } from 'dotenv';
 config()
+import { forwardToGpt } from "./openai";
 
 const client = new Discord.Client({
     intents: [
@@ -27,7 +28,8 @@ client.on('messageCreate', (message: Discord.Message) => {
 
     //  If the message mentions the bot
     if (message.mentions.has(client.user!!)) {
-        message.reply(`Hola`);
+        //message.reply(`Hola`);
+        forwardToGpt(client, message);
     }
 })
 
